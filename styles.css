@@ -3,7 +3,6 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
 	color: blue;
 }
 * {
@@ -57,7 +56,7 @@ h1 {
 	justify-content: space-between;
 	align-items: center;
 	border-radius: 0.6em;
-	background-color: transparent;
+	background-color: #fff;
 	border: 2px solid #e74c3c;
 }
 #text-box {
@@ -74,7 +73,7 @@ h1 {
 	padding: 1em;
 	outline: none;
 	border-radius: 0.6em;
-	background-color: transparent;
+	background-color: #fff;
 	border: 2px solid #e74c3c;
 }
 .btn-box {
@@ -84,9 +83,15 @@ h1 {
 	align-items: flex-end;
 	flex-direction: column;
 }
+#btn-box{
+	gap: 1.2em;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
 button{
 	background: #e74c3c;
-	border: 2px solid transparent;
+	border: 2px solid #fff;
 	color: #fff;
 	border-radius: 0.6em;
 	cursor: pointer;
@@ -98,11 +103,11 @@ button{
 }
 #submit-btn, #remove-btn {
 	background: #e74c3c;
-	border: 2px solid transparent;
+	border: 2px solid #fff;
 	color: #fff;
 }
-#clear-btn {
-	background-color: transparent;
+#clear-btn, #pin-btn {
+	background-color: #fff;
 	border: 2px solid #e74c3c;
 	color: #e74c3c;
 }
@@ -120,8 +125,31 @@ button{
 	align-items: center;
 	flex-direction: column;
 	border-radius: 0.6em;
-	background-color: transparent;
+	background-color: #fff;
 	border: 2px solid #e74c3c;
+}
+.line{
+	width: 100%;
+	height: 2px;
+	background: #E74C3C;
+}
+#pinned{
+	gap: 1.2em;
+	border-radius: 0.6em;
+	background-color: #fff;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+}
+#not-pinned{
+	gap: 1.2em;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
 }
 .task {
 	width: 100%;
@@ -132,7 +160,7 @@ button{
 	justify-content: space-between;
 	align-items: center;
 	border-radius: 0.6em;
-	background-color: transparent;
+	background-color: #fff;
 	border: 2px solid #e74c3c;
 }
 .text-box {
@@ -157,4 +185,23 @@ button{
 	overflow:visible;
 	white-space: normal;
 	text-overflow: clip;
+}
+
+#pinned > .task *{
+	color: #fff;
+}
+#pinned > .task #remove-btn {
+	background-color: #E74C3C;
+	border: 2px solid #fff;
+	color: #fff;
+}
+#pinned > .task #pin-btn {
+	background: #fff;
+	border: 2px solid #fff;
+	color: #fff;
+}
+#pinned > .task{
+	background: #e74c3c;
+	border: 2px solid #fff;
+	transition: .3s;
 }
